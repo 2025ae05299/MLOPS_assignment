@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dhariniadiga/MLOPS_assignment/MLOPS_assignment/mlruns/842955640807433037/e42900c0ede841f38a076aa3ac51851d/artifacts
+end_time: 1792430057732
+entry_point_name: ''
+experiment_id: '842955640807433037'
+lifecycle_stage: active
+run_id: e42900c0ede841f38a076aa3ac51851d
+run_name: selected-hist_gradient_boosting
+run_uuid: e42900c0ede841f38a076aa3ac51851d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1792430057723
+status: 4
+tags: []
+user_id: dhariniadiga

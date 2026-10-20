@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dhariniadiga/MLOPS_assignment/MLOPS_assignment/mlruns/842955640807433037/bf5266823c114ee5a31065333e58298b/artifacts
+end_time: 1792430049765
+entry_point_name: ''
+experiment_id: '842955640807433037'
+lifecycle_stage: active
+run_id: bf5266823c114ee5a31065333e58298b
+run_name: logistic_regression
+run_uuid: bf5266823c114ee5a31065333e58298b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1792430047833
+status: 3
+tags: []
+user_id: dhariniadiga
