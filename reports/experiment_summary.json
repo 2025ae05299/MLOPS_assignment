@@ -1,0 +1,100 @@
+{
+  "experiment": "pulseguard-multisite",
+  "random_state": 5299,
+  "selection_policy": "Maximize 0.70 * OOF ROC-AUC + 0.30 * OOF recall on the train split. Threshold tuned by F1.5 on OOF scores. Test split used once.",
+  "rows": 920,
+  "positive_rate": 0.5532608695652174,
+  "best_model": "hist_gradient_boosting",
+  "decision_threshold": 0.21000000000000002,
+  "high_risk_threshold": 0.7,
+  "candidates": [
+    {
+      "name": "hist_gradient_boosting",
+      "search_best_roc_auc": 0.898290050810376,
+      "cv_roc_auc": 0.8963914176680134,
+      "cv_recall": 0.8501228501228502,
+      "cv_precision": 0.858560794044665,
+      "cv_accuracy": 0.8396739130434783,
+      "cv_f1": 0.854320987654321,
+      "utility": 0.8825108474044644,
+      "best_params": {
+        "model__learning_rate": 0.05,
+        "model__max_depth": 3,
+        "model__max_iter": 180
+      }
+    },
+    {
+      "name": "random_forest",
+      "search_best_roc_auc": 0.8924764004438799,
+      "cv_roc_auc": 0.892915020574595,
+      "cv_recall": 0.8378378378378378,
+      "cv_precision": 0.8337408312958435,
+      "cv_accuracy": 0.8179347826086957,
+      "cv_f1": 0.8357843137254902,
+      "utility": 0.8763918657535679,
+      "best_params": {
+        "model__max_depth": 8,
+        "model__min_samples_leaf": 4,
+        "model__n_estimators": 320
+      }
+    },
+    {
+      "name": "logistic_regression",
+      "search_best_roc_auc": 0.8970723144164877,
+      "cv_roc_auc": 0.8972763866380887,
+      "cv_recall": 0.8230958230958231,
+      "cv_precision": 0.8438287153652393,
+      "cv_accuracy": 0.8179347826086957,
+      "cv_f1": 0.8333333333333334,
+      "utility": 0.875022217575409,
+      "best_params": {
+        "model__C": 0.2
+      }
+    }
+  ],
+  "test_metrics": {
+    "accuracy": 0.8152173913043478,
+    "precision": 0.7698412698412699,
+    "recall": 0.9509803921568627,
+    "f1": 0.8508771929824561,
+    "roc_auc": 0.9114060258249641,
+    "pr_auc": 0.9134450897293019
+  },
+  "per_site_test_auc": {
+    "cleveland": {
+      "rows": 66,
+      "roc_auc": 0.9351503759398496
+    },
+    "hungarian": {
+      "rows": 58,
+      "roc_auc": 0.8688725490196079
+    },
+    "switzerland": {
+      "rows": 24,
+      "roc_auc": null
+    },
+    "va": {
+      "rows": 36,
+      "roc_auc": 0.826923076923077
+    }
+  },
+  "mlflow_runs": [
+    {
+      "name": "logistic_regression",
+      "run_id": "24504b1b796e4610bb30f9189f941344",
+      "utility": 0.875022217575409
+    },
+    {
+      "name": "random_forest",
+      "run_id": "ceaae0b8c45748719cd2fd14a2d029e6",
+      "utility": 0.8763918657535679
+    },
+    {
+      "name": "hist_gradient_boosting",
+      "run_id": "747e7539c4fe4da787f294b957f1674a",
+      "utility": 0.8825108474044644
+    }
+  ],
+  "model_path": "models/pulseguard_pipeline.joblib",
+  "disclaimer": "Educational coursework model trained on the public UCI Heart Disease collection. It is not a medical device, does not diagnose disease, and must not be used for clinical decisions."
+}

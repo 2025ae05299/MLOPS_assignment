@@ -1,0 +1,28 @@
+{
+  "rows": 920,
+  "positive_cases": 509,
+  "positive_rate": 0.5532608695652174,
+  "sites": {
+    "cleveland": 303,
+    "hungarian": 294,
+    "va": 200,
+    "switzerland": 123
+  },
+  "missing_rate": {
+    "trestbps": 0.06521739130434782,
+    "chol": 0.21956521739130436,
+    "fbs": 0.09782608695652174,
+    "restecg": 0.002173913043478261,
+    "thalach": 0.059782608695652176,
+    "exang": 0.059782608695652176,
+    "oldpeak": 0.06739130434782609,
+    "slope": 0.3358695652173913,
+    "ca": 0.6641304347826087,
+    "thal": 0.5282608695652173
+  },
+  "notes": [
+    "The four processed UCI sites are modeled together instead of the usual 303-row Cleveland extract.",
+    "Zero cholesterol values, concentrated in the Switzerland file, are treated as unmeasured.",
+    "ca and thal are missing for a large share of non-Cleveland rows, so missingness is a feature."
+  ]
+}

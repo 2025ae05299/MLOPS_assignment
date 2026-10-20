@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-api
+  labels:
+    app: pulseguard-api
+spec:
+  type: {{ .Values.service.type }}
+  selector:
+    app: pulseguard-api
+  ports:
+    - name: http
+      port: {{ .Values.service.port }}
+      targetPort: http

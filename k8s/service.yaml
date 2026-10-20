@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pulseguard-api
+  namespace: pulseguard
+  labels:
+    app: pulseguard-api
+spec:
+  type: LoadBalancer
+  selector:
+    app: pulseguard-api
+  ports:
+    - name: http
+      port: 80
+      targetPort: http

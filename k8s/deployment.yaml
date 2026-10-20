@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pulseguard-api
+  namespace: pulseguard
+  labels:
+    app: pulseguard-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pulseguard-api
+  template:
+    metadata:
+      labels:
+        app: pulseguard-api
+    spec:
+      containers:
+        - name: api
+          image: pulseguard-api:1.0.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: pulseguard-config
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: "1"
+              memory: 512Mi

@@ -1,0 +1,55 @@
+{
+  "rows": 920,
+  "positive_cases": 509,
+  "positive_rate": 0.5532608695652174,
+  "sites": [
+    {
+      "site": "cleveland",
+      "file": "processed.cleveland.data",
+      "rows": 303,
+      "sha256": "a74b7efa387bc9d108d7d0115d831fe9b414b29ae7124f331b622b4efa0427c8"
+    },
+    {
+      "site": "hungarian",
+      "file": "processed.hungarian.data",
+      "rows": 294,
+      "sha256": "d1ad108f785768cd3d7e82dc522e6f5a61eea93cccfb3a46ee8076f73fc3d796"
+    },
+    {
+      "site": "switzerland",
+      "file": "processed.switzerland.data",
+      "rows": 123,
+      "sha256": "834a405ccf5b66ab4056bb77794adc8df0b7125186454c0a1d002d33c6c3b314"
+    },
+    {
+      "site": "va",
+      "file": "processed.va.data",
+      "rows": 200,
+      "sha256": "e7c93d8d0d2acdadfa4c5e8de768e2191e7f618b952e29623f1f0d5949ff6b8f"
+    }
+  ],
+  "missing_rate": {
+    "age": 0.0,
+    "sex": 0.0,
+    "cp": 0.0,
+    "trestbps": 0.06521739130434782,
+    "chol": 0.21956521739130436,
+    "fbs": 0.09782608695652174,
+    "restecg": 0.002173913043478261,
+    "thalach": 0.059782608695652176,
+    "exang": 0.059782608695652176,
+    "oldpeak": 0.06739130434782609,
+    "slope": 0.3358695652173913,
+    "ca": 0.6641304347826087,
+    "thal": 0.5282608695652173,
+    "num": 0.0,
+    "source_site": 0.0
+  },
+  "sentinel_policy": [
+    "Question marks in the UCI files are treated as missing.",
+    "Cholesterol, resting blood pressure, and max heart rate at or below zero are treated as missing sentinels.",
+    "Switzerland records cholesterol as 0 when it was not measured; those zeros are not real lipid values.",
+    "Diagnosis severity num is retained, and heart_disease is 1 when num > 0."
+  ],
+  "citation": "Janosi et al., Heart Disease, UCI ML Repository, https://doi.org/10.24432/C52P4X"
+}

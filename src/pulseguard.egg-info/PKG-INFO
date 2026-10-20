@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: pulseguard
+Version: 1.0.0
+Summary: Educational MLOps service for UCI heart-disease risk scoring.
+Requires-Python: >=3.9
